@@ -1,0 +1,97 @@
+
+
+@property --primary-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #3498db;
+}
+
+@property --default-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #2ecc71;
+}
+
+@property --large-size {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 16px;
+}
+
+@property --default-size {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 14px;
+}
+
+@property --default-padding {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 10px;
+}
+
+@property --hover-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #2980b9;
+}
+
+@property --disabled-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #bdc3c7;
+}
+
+:root {
+  --primary-color: #3498db;
+  --default-color: #2ecc71;
+  --large-size: 16px;
+  --default-size: 14px;
+  --default-padding: 10px;
+  --hover-color: #2980b9;
+  --disabled-color: #bdc3c7;
+}
+
+.large-size {
+  font-size: var(--large-size);
+}
+
+.default-size {
+  font-size: var(--default-size);
+}
+
+.default-padding {
+  padding: var(--default-padding);
+  margin: var(--default-padding);
+}
+
+.default-border {
+  border: 1px solid var(--default-color);
+  transition: border-color 0.3s;
+}
+
+.default-border:hover {
+  border-color: var(--hover-color);
+}
+
+.default-bg-color {
+  background-color: var(--default-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.default-bg-color:hover {
+  background-color: var(--hover-color);
+}
+
+.default-bg-color:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
